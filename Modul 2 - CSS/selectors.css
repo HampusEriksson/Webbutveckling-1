@@ -1,0 +1,50 @@
+* {
+    font-family:'Courier New'; 
+}
+
+body {
+    font-size: 22px;
+}
+
+p {
+    color : red;
+}
+
+p {
+    color :blue;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.about {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#about {
+    color: blue;
+    text-align: center;
+}
+
+#home {
+    color: green;
+    text-align: center;
+}
+
+
+h1, h2 {
+    color: blue;
+    text-align: center;
+}
+
+p span {
+    text-transform: uppercase;
+    background-color: yellow;
+}
+
+.highlight{
+    text-transform: uppercase;
+    background-color: yellow;
+}
