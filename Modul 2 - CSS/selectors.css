@@ -5,6 +5,9 @@
 body {
     font-size: 22px;
 }
+.yellow {
+    color: yellow;
+}
 
 p {
     color : red;
@@ -13,6 +16,7 @@ p {
 p {
     color :blue;
 }
+
 
 .highlight {
     background-color: yellow;

@@ -1,0 +1,52 @@
+/* Apply common styles to all border examples */
+.border-example {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  border-width: 10px;
+}
+
+/* Different border styles */
+.border-example {
+  border-style: solid;
+
+  border-color: #000;
+}
+
+.border-example.dotted {
+  border-style: dotted;
+  border-color: #999;
+}
+
+.border-example.dashed {
+  border-style: dashed;
+  border-color: #00f;
+}
+
+.border-example.double {
+  border-style: double;
+  border-color: #f00;
+}
+
+.border-example.groove {
+  border-style: groove;
+  border-color: #0c0;
+}
+
+.border-example.ridge {
+  border-style: ridge;
+  border-color: #f90;
+}
+
+.border-example.inset {
+  border-style: inset;
+  border-color: #666;
+}
+
+.border-example.outset {
+  border-style: outset;
+  border-color: #090;
+}

@@ -1,0 +1,31 @@
+/* Common styles for padding examples */
+div {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+/* Different padding values for each side */
+.padding-example {
+  padding: 20px; /* Padding on all sides */
+}
+
+.padding-top {
+  padding-top: 10px; /* Padding only on the top */
+}
+
+.padding-right {
+  padding-right: 30px; /* Padding only on the right */
+}
+
+.padding-bottom {
+  padding-bottom: 15px; /* Padding only on the bottom */
+}
+
+.padding-left {
+  padding-left: 25px; /* Padding only on the left */
+}

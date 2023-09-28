@@ -1,0 +1,54 @@
+/* Define CSS classes for text styling */
+
+/* Class for making text bold */
+.bold-text {
+    font-weight: bold;
+}
+
+/* Class for making text italic */
+.italic-text {
+    font-style: italic;
+}
+
+/* Class for making text oblique */
+.oblique-text {
+    font-style: oblique;
+}
+/* Class for changing text color */
+.colorful-text {
+    color: #e74c3c; /* Red color */
+}
+
+/* Class for underlining text */
+.underline-text {
+    text-decoration: underline;
+}
+
+/* Class for changing font size */
+.large-text {
+    font-size: 24px;
+}
+
+/* Class for custom text styling */
+.custom-text {
+    font-family: "Times New Roman", serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: line-through;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+p {
+    font: italic small-caps bold 16px/1.5 "Times New Roman", serif;
+}
+
