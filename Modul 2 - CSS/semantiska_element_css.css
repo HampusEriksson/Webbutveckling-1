@@ -1,75 +1,79 @@
 /* Reset some default styles for common elements */
 /* Reset margins and padding for body, headings, paragraphs, and lists */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* Set the default font family for the entire page */
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 /* Header styling */
 header {
-    /* Background color for the header */
-    background-color: #333;
-    /* Text color for content inside the header */
-    color: white;
-    /* Center-align text within the header */
-    text-align: center;
-    /* Add padding to create space around the content */
-    padding: 20px;
+  /* Background color for the header */
+  background-color: #333;
+  /* Text color for content inside the header */
+  color: white;
+  /* Center-align text within the header */
+  text-align: center;
+  /* Add padding to create space around the content */
+  padding: 20px;
 }
 
 /* Navigation styling */
 nav ul {
-    /* Remove the default list bullet points */
-    list-style-type: none;
-    /* Display navigation items in a horizontal row */
-    display: flex;
-    /* Space items evenly within the navigation bar */
-    justify-content: space-around;
-    /* Background color for the navigation bar */
-    background-color: #444;
-    /* Add padding to create space around the navigation items */
-    padding: 10px 0;
+  /* Remove the default list bullet points */
+  list-style-type: none;
+  /* Display navigation items in a horizontal row */
+  display: flex;
+  /* Space items evenly within the navigation bar */
+  justify-content: space-around;
+  /* Background color for the navigation bar */
+  background-color: #444;
+  /* Add padding to create space around the navigation items */
+  padding: 10px 0;
 }
 
 nav a {
-    /* Remove underlines from links */
-    text-decoration: none;
-    /* Set the text color for links in the navigation bar */
-    color: white;
+  /* Remove underlines from links */
+  text-decoration: none;
+  /* Set the text color for links in the navigation bar */
+  color: white;
 }
 
 /* Main content styling */
 main {
-    /* Add margin to create space around the main content */
-    margin: 20px;
+  /* Add margin to create space around the main content */
+  margin: 20px;
 }
 
 section {
-    /* Background color for individual sections */
-    background-color: #f5f5f5;
-    /* Add padding inside each section */
-    padding: 20px;
-    /* Add margin at the bottom of each section to separate them */
-    margin-bottom: 20px;
-    /* Add a border around each section */
-    border: 1px solid #ddd;
-    /* Add rounded corners to the section */
-    border-radius: 5px;
+  /* Background color for individual sections */
+  background-color: #f5f5f5;
+  /* Add padding inside each section */
+  padding: 20px;
+  /* Add margin at the bottom of each section to separate them */
+  margin-bottom: 20px;
+  /* Add a border around each section */
+  border: 1px solid #ddd;
+  /* Add rounded corners to the section */
+  border-radius: 5px;
 }
 
 /* Footer styling */
 footer {
-    /* Background color for the footer */
-    background-color: #333;
-    /* Text color for content inside the footer */
-    color: white;
-    /* Center-align text within the footer */
-    text-align: center;
-    /* Add padding to create space around the content */
-    padding: 10px;
+  /* Background color for the footer */
+  background-color: #333;
+  /* Text color for content inside the footer */
+  color: white;
+  /* Center-align text within the footer */
+  text-align: center;
+  /* Add padding to create space around the content */
+  padding: 10px;
+}
+
+#lorem {
+  font-size: 48px;
 }

@@ -1,3 +1,6 @@
+* {
+  text-align: center;
+}
 div {
   background-color: green;
   padding: 5px;
@@ -17,7 +20,7 @@ div {
 .navbar {
   background-color: #dc4f4f;
   padding: 0;
-  text-align: center;
+  display: inline-block;
 }
 
 ul {

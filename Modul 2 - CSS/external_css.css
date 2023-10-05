@@ -1,19 +1,20 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+  font-family: "comic sans", "Times New Roman", Times, serif;
+  background-color: #f0f0f0;
+  font: 16px/1.5em "comic sans", "Times New Roman", Times, serif;
 }
 
 h1 {
-    color: blue;
-    text-align: center;
+  color: blue;
+  text-align: center;
 }
 
 p {
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .highlight {
-    background-color: yellow;
+  background-color: yellow;
 }

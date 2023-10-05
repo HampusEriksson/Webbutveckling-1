@@ -1,54 +1,55 @@
 * {
-    font-family:'Courier New'; 
+  font-family: "Courier New";
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-size: 22px;
+  font-size: 22px;
 }
 .yellow {
-    color: yellow;
+  color: yellow;
 }
 
 p {
-    color : red;
+  color: red;
 }
 
 p {
-    color :blue;
+  color: blue;
 }
-
 
 .highlight {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .about {
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #about {
-    color: blue;
-    text-align: center;
+  color: blue;
+  text-align: center;
 }
 
 #home {
-    color: green;
-    text-align: center;
+  color: green;
+  text-align: center;
 }
 
-
-h1, h2 {
-    color: blue;
-    text-align: center;
+h1,
+h2 {
+  color: blue;
+  text-align: center;
 }
 
 p span {
-    text-transform: uppercase;
-    background-color: yellow;
+  text-transform: uppercase;
+  background-color: yellow;
 }
 
-.highlight{
-    text-transform: uppercase;
-    background-color: yellow;
+.highlight {
+  text-transform: uppercase;
+  background-color: yellow;
 }
