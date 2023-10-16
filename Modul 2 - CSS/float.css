@@ -1,10 +1,14 @@
 * {
-  text-align: center;
+margin: 0;
+padding: 0;
+
 }
+
 div {
   background-color: green;
   padding: 5px;
   margin: 5px;
+  box-sizing: border-box; 
 }
 
 .row1 {
@@ -17,19 +21,21 @@ div {
   float: left;
 }
 
-.navbar {
-  background-color: #dc4f4f;
-  padding: 0;
-  display: inline-block;
-}
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+nav {
+  background-color: rgb(165, 44, 44);
+  text-align: center;
 }
 
 ul li {
   display: inline-block;
   font-size: 24px;
+  margin-right: 50px;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
