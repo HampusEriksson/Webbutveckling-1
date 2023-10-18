@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  background-color: #fff;
+  z-index: 100;
+}
+
 .parent {
   padding: 10px;
   background-color: gray;
@@ -7,14 +19,22 @@
 
 .child-one {
   background-color: red;
-  position: sticky;
-  top: 0px;
+  position: relative;
+  top: 10px;
 }
 
 .child-two {
   background-color: yellow;
+  position: relative;
+  top: 0;
 }
 
 .child-three {
   background-color: blue;
+  position: relative;
+  top: 10px;
+}
+
+.child-one h1 {
+  position: relative;
 }

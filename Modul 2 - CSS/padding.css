@@ -1,12 +1,6 @@
-/* Common styles for padding examples */
-div {
-  width: 200px;
-  height: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 100px;
-  font-weight: bold;
-  border: 1px solid #ccc;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 /* Different padding values for each side */
@@ -28,4 +22,15 @@ div {
 
 .padding-left {
   padding-left: 25px; /* Padding only on the left */
+}
+
+/* Common styles for padding examples */
+div {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  border: 1px solid #ccc;
 }
