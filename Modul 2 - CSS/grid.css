@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    background-color: black;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.grid-item{
+    border: 1px solid black;
+    text-align: center;
+    background-color: chartreuse;
+    font-size: 24px;
+    color: red;
+}
+
+
+
+
+
+
