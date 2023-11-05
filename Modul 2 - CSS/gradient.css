@@ -2,9 +2,9 @@
 .gradient-background {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to bottom, #4e54c8, #8f94fb); /* Gradient colors */
-    color: white; /* Text color */
+    background: radial-gradient(circle, #4CAF50, #2196F3, #f44336);    color: white; /* Text color */
     text-align: center; /* Center the text */
     padding: 20px;
   }
   
+
