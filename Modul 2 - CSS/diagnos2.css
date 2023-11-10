@@ -1,0 +1,36 @@
+/*Elementet body */
+body {
+  background-color: aliceblue;
+}
+
+/*Klassen body */
+.body {
+  background-color: aqua;
+  width: 50vw;
+}
+
+/*ID body */
+#body {
+}
+
+h3 {
+  font-size: 12px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+
+/*Alla p i div*/
+div p {
+}
+
+/*Alla p med klassen body*/
+
+p.body {
+}
+/*Alla direkta children p till div*/
+div > p {
+}
+
+p:hover {
+  color: aqua;
+}
