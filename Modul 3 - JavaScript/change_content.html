@@ -6,9 +6,16 @@
     <title>Content Update Example</title>
 </head>
 <body>
-    <script>
-        document.getElementById('demo').innerHTML = 'Content updated with JavaScript!';
-    </script>
+    <button onclick="changeText()">Change the text</button>
+
     <p id="demo">Original Content</p>
 </body>
+<script>
+    function changeText() {
+        document.getElementById('demo').innerHTML = 'Content updated with JavaScript!';
+    }
+    
+</script>
 </html>
+
+

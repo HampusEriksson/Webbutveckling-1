@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Example</title>
+</head>
+<body>
+    <button onclick="showMessage(this, 1)">Click me</button>
+    <button onclick="showMessage(this, 3)">Click me</button>
+    <button onclick="showMessage(this, 2)">Click me</button>
+    <button onclick="showMessage(this, 3)">Click me</button>
+    <button onclick="showMessage(this, 2)">Click me</button>
+    <button onclick="showMessage(this, 1)">Click me</button>
+
+    
+</body>
+<script>
+    currentNumber = 0;
+    function showMessage(button, number) {
+        button.textContent = number;
+        if (currentNumber == 0) {
+            currentNumber = number;
+        } else {
+            if (currentNumber == number) {
+                alert('You found a pair!');
+            } else {
+                alert('Try again!');
+                hideAllButtons();
+            }
+            currentNumber = 0;
+        }        
+    }
+
+    function hideAllButtons() {
+        // Get all buttons and hide them
+        let buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.textContent = 'Click me';
+        });
+
+    }
+</script>
+</html>

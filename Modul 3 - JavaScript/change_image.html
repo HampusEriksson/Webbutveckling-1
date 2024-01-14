@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image Source</title>
+</head>
+<body>
+    <img id="myImage" src="sun.webp" alt="Initial Image">
+    <button onclick="changeImageSource()">Don't click here</button>
+
+    <script>
+        function changeImageSource() {
+            var imageElement = document.getElementById('myImage');
+            imageElement.src = 'hell.webp';
+        }
+    </script>
+</body>
+</html>
