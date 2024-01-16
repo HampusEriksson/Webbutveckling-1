@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Input Example</title>
-</head>
-<body>
-    <input type="text" id="nameInput" placeholder="Enter your name">
+  </head>
+  <body>
+    <input type="text" id="nameInput" placeholder="Enter your name" />
     <button onclick="greet()">Say Hello</button>
+  </body>
 
-    
-</body>
-
-<script>
+  <script>
     function greet() {
-        let name = document.getElementById('nameInput').value;
-        alert('Hello, ' + name + '!');
+      let name = document.getElementById("nameInput").value;
+      alert("Welcome " + name + " !");
+      alert(`Welcome ${name}!`);
     }
-</script>
+  </script>
 </html>

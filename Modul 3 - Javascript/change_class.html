@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Class with JS</title>
+    <style>
+      .original-style {
+        color: blue;
+      }
+
+      .new-style {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="changeClass()">Change the text</button>
+    <p id="myParagraph" class="original-style">This is a paragraph.</p>
+
+    <script>
+      function changeClass() {
+        // Get the element by its ID
+        var element = document.getElementById("myParagraph");
+
+        // Change the class using JavaScript
+        element.classList.remove("original-style"); // Remove the original class
+        element.classList.add("new-style"); // Add the new class
+      }
+    </script>
+  </body>
+</html>

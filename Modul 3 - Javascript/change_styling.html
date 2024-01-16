@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Styling with JS</title>
+  </head>
+  <body>
+    <button onclick="changeStyling()">Change the text</button>
+
+    <div id="myElement">This is my element</div>
+
+    <script>
+      // Get the element by its ID
+      function changeStyling() {
+        var element = document.getElementById("myElement");
+
+        // Change styling using JavaScript
+        element.style.width = "200px";
+        element.style.height = "200px";
+        element.style.backgroundColor = "blue";
+      }
+    </script>
+  </body>
+</html>
