@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Events Example</title>
+  </head>
+  <body>
+    <button onclick="showMessage(this, 1)">Click me</button>
+    <button onclick="showMessage(this, 3)">Click me</button>
+    <button onclick="showMessage(this, 2)">Click me</button>
+    <button onclick="showMessage(this, 3)">Click me</button>
+    <button onclick="showMessage(this, 2)">Click me</button>
+    <button onclick="showMessage(this, 1)">Click me</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    currentNumber = 0;
+    click_enabled = true;
+    pairs_found = 0;
+    function showMessage(button, number) {
+      if (!click_enabled) return; // Disable clicking while buttons are being hidden
+      button.innerText = number;
+      if (currentNumber == 0) {
+        currentNumber = number;
+      } else {
+        if (currentNumber == number) {
+          pairs_found++;
+          button.setAttribute("matched", "true"); // Mark the button as matched
+        } else {
+          click_enabled = false;
+          hideAllButtons();
+          click_enabled = true;
+        }
+        currentNumber = 0;
+      }
+      let result = document.getElementById("result");
+      result.innerText = "Pairs found: " + pairs_found;
+    }
+
+    function hideAllButtons() {
+      // Get all buttons and hide them after a delay
+      let buttons = document.querySelectorAll("button");
+      // Likvärdigt med pythons for button in buttons:
+      buttons.forEach((button) => {
+        if (!button.hasAttribute("matched")) {
+          // Check if the button is not already matched
+          setTimeout(() => {
+            button.textContent = "Click me";
+            button.removeAttribute("matched"); // Remove the matched attribute
+          }, 1000); // Delay in milliseconds
+        }
+      });
+    }
+  </script>
+</html>

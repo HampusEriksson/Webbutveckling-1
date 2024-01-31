@@ -1,7 +1,7 @@
 
 
 
-
+// Bra sätt
 let loopList = document.getElementById("loopList");
 
 for (let i = 1; i <= 5; i++) {
@@ -10,11 +10,17 @@ for (let i = 1; i <= 5; i++) {
     loopList.appendChild(listItem);
 }
 
+
+
+
+// Dåligt sätt
 let loopList2 = document.getElementById("loopList");
 
 for (let i = 1; i <= 5; i++) {
     loopList2.innerHTML += "<li>Count: " + i + "</li>";
 }
+
+
 
 
 
