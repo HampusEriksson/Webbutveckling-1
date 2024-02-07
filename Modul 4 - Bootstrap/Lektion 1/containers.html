@@ -2,71 +2,68 @@
 
 <!--https://www.youtube.com/watch?v=eow125xV5-c&t=356s&ab_channel=Raddy-->
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap - Intro</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bootstrap - Intro</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="containers.css" />
+  </head>
 
-  <link rel="stylesheet" href="containers.css">
+  <body>
+    <div class="container">Regular container</div>
+    <div class="container-sm">100% wide until small breakpoint</div>
+    <div class="container-md">100% wide until medium breakpoint</div>
+    <div class="container-lg">100% wide until large breakpoint</div>
+    <div class="container-xl">100% wide until extra large breakpoint</div>
+    <div class="container-xxl">
+      100% wide until extra extra large breakpoint
+    </div>
+    <div class="container-fluid">Fluid container</div>
 
-</head>
+    <br /><br /><br /><br /><br /><br />
+    <h1>Current Browser Size</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Viewport Size</th>
+          <th>Bootstrap Breakpoint</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Extra small (&lt;576px)</td>
+          <td>xs</td>
+        </tr>
+        <tr>
+          <td>Small (&ge;576px)</td>
+          <td>sm</td>
+        </tr>
+        <tr>
+          <td>Medium (&ge;768px)</td>
+          <td>md</td>
+        </tr>
+        <tr>
+          <td>Large (&ge;992px)</td>
+          <td>lg</td>
+        </tr>
+        <tr>
+          <td>X-Large (&ge;1200px)</td>
+          <td>xl</td>
+        </tr>
+        <tr>
+          <td>XX-Large (&ge;1400px)</td>
+          <td>xxl</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 
-<body>
-  <div class="container">Regular container</div>
-  <div class="container-sm">100% wide until small breakpoint</div>
-  <div class="container-md">100% wide until medium breakpoint</div>
-  <div class="container-lg">100% wide until large breakpoint</div>
-  <div class="container-xl">100% wide until extra large breakpoint</div>
-  <div class="container-xxl">100% wide until extra extra large breakpoint</div>
-  <div class="container-fluid">Fluid container</div>
-
-
-
-  <br><br><br><br><br><br>
-  <p id="size"></p>
-  <h1>Current Browser Size</h1>
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th>Viewport Size</th>
-        <th>Bootstrap Breakpoint</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Extra small (&lt;576px)</td>
-        <td>xs</td>
-      </tr>
-      <tr>
-        <td>Small (&ge;576px)</td>
-        <td>sm</td>
-      </tr>
-      <tr>
-        <td>Medium (&ge;768px)</td>
-        <td>md</td>
-      </tr>
-      <tr>
-        <td>Large (&ge;992px)</td>
-        <td>lg</td>
-      </tr>
-      <tr>
-        <td>X-Large (&ge;1200px)</td>
-        <td>xl</td>
-      </tr>
-      <tr>
-        <td>XX-Large (&ge;1400px)</td>
-        <td>xxl</td>
-      </tr>
-    </tbody>
-  </table>
-
-
-</body>
-
-<script src="containers.js"></script>
-
-
+  <script src="containers.js"></script>
 </html>
