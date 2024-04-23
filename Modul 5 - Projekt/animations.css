@@ -1,0 +1,55 @@
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000000;
+    /* Svart textfärg */
+    text-decoration: none;
+    margin-right: 10px;
+    position: relative;
+}
+
+/* Förstorningseffekt */
+.scale-effect:hover {
+    transform: scale(1.1);
+}
+
+/* Färgförändring */
+.color-effect:hover {
+    color: #ff0000;
+    /* Röd färg */
+}
+
+/* Bakgrundsförändring */
+.background-effect:hover {
+    background-color: #ffcc00;
+    /* Gul bakgrundsfärg */
+}
+
+/* Skuggeffekt */
+.shadow-effect:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Ljus skugga */
+}
+
+/* Skakningseffekt */
+.rotate-effect:hover {
+    transform: rotate(5deg);
+    /* Rotera 5 grader åt höger */
+}
+
+/* Delvis understreck */
+.underline-effect::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    /* Svart understreck */
+    transition: width 0.3s ease;
+}
+
+.underline-effect:hover::before {
+    width: 100%;
+}

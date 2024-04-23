@@ -1,0 +1,17 @@
+.good-example {
+    background-color: #ffffff;
+    /* Vit bakgrund */
+    color: #333333;
+    /* Mörk textfärg */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.bad-example {
+    background-color: #eeeeee;
+    /* Ljusgrå bakgrund */
+    color: #777777;
+    /* Ljusgrå textfärg */
+    padding: 20px;
+    margin-bottom: 20px;
+}
