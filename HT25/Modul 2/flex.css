@@ -1,25 +1,14 @@
 .flexbox-container {
   display: flex;
+  text-align: center;
+  background-color: lightblue;
 }
 
 .flexbox-item {
-  width: 1500px;
   margin: 10px;
   border: 3px solid #73ad21;
   background-color: antiquewhite;
-}
-
-.flexbox-item-1 {
-  min-height: 100px;
-  flex-shrink: 0;
-  text-align: center;
-}
-
-.flexbox-item-2 {
-  min-height: 200px;
-}
-
-.flexbox-item-3 {
+  min-width: 300px;
   min-height: 300px;
   flex-grow: 1;
 }

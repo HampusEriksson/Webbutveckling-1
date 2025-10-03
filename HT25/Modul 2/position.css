@@ -1,0 +1,55 @@
+
+*{
+    font-size: 48px;
+}
+.container {
+    position: relative;
+    border: 2px solid #333;
+    height: 300px;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Static - default */
+.static {
+    background-color: #3498db;
+    position: static; /* egentligen default, här för tydlighet */
+}
+
+/* Relative - flytta relativt till original position */
+.relative {
+    background-color: #2ecc71;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+/* Absolute - positioneras relativt till närmaste förfader med position */
+.absolute {
+    background-color: #e74c3c;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+/* Fixed - sitter kvar på skärmen även vid scroll */
+.fixed {
+    background-color: #9b59b6;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* Sticky - klistrar fast när den når toppen av containern */
+.sticky {
+    background-color: #f39c12;
+    position: sticky;
+    top: -60px;
+}
