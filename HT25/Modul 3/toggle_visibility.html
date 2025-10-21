@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
   <body>
-    
-    
+    <button onclick="toggleVisibility()">Klicka här</button>
 
-    <script>
+    <p id = "text">Hejsan på er TEI24A!</p>
+    
+  </body>
+
+  <script>
         
       function toggleVisibility() {
         const element = document.getElementById("text");
-        element.style.display = element.style.display === "none" ? "block" : "none";
-
+        //element.style.display = element.style.display === "none" ? "block" : "none";
+        // Kan även skrivas:
+        if(element.style.display === "none"){
+          element.style.display = "block"
+        }
+        else {
+          element.style.display = "none"
+        }
       }
     </script>
-  </body>
 </html>
