@@ -1,0 +1,21 @@
+img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+img{
+    width: 800px;
+    transition: transform 1s, opacity 1s;
+    opacity: 0.00000001;
+}
+
+
+a{
+    font-size: 100px;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-shadow: 2px 2px 5px black;
+}

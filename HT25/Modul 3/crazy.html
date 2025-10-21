@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do Not Click</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+    transition: background 0.2s;
+  }
+
+  button {
+    font-size: 2rem;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: crimson;
+    color: white;
+    transition: transform 0.1s, background 0.2s;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+
+  .shake {
+    animation: shake 0.3s infinite;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(5px, 5px); }
+    50% { transform: translate(-5px, -5px); }
+    75% { transform: translate(5px, -5px); }
+  }
+</style>
+</head>
+<body>
+  <button id="theButton">Don't click</button>
+
+  <script>
+    let clicks = 0;
+    const btn = document.getElementById("theButton");
+
+    btn.addEventListener("click", () => {
+      clicks++;
+
+      if (clicks === 10) {
+        btn.textContent = "Stop it. I mean it!";
+        btn.style.background = "darkorange";
+      }
+
+      if (clicks === 20) {
+        btn.textContent = "You asked for it...";
+        goCrazy();
+      }
+    });
+
+    function goCrazy() {
+      let colors = ["red", "green", "blue", "yellow", "magenta", "cyan", "lime", "orange"];
+      btn.classList.add("shake");
+
+      setInterval(() => {
+        document.body.style.background = colors[Math.floor(Math.random() * colors.length)];
+        btn.style.background = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.color = colors[Math.floor(Math.random() * colors.length)];
+      }, 100);
+
+      setInterval(() => {
+        alert("WHY DID YOU CLICK IT?!");
+      }, 3000);
+
+      let rotate = 0;
+      setInterval(() => {
+        rotate += 10;
+        btn.style.transform = `rotate(${rotate}deg) scale(1.2)`;
+      }, 200);
+    }
+  </script>
+</body>
+</html>
