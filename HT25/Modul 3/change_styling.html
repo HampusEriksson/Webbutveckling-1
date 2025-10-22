@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    div{
+      width: 100px;
+      height: 200px;
+      background-color: brown;
+    }
+  </style>
+  <body>
+   
+    <button onclick="changeDiv()">Tryck här</button>
+    <div id="mindiv">Här är min div Cornelis</div>
+  </body>
+
+   <script>
+    clicks = 0;
+    function changeDiv() {
+      clicks += 1;
+      mindiv = document.getElementById("mindiv");
+      mindiv.style.width = 100 + (clicks*20) + "px";
+      mindiv.style.height = 200 + (clicks*20) + "px";
+      mindiv.style.fontSize = 14 + (clicks*2) + "px";
+        
+     }
+
+   </script>
+</html>
+

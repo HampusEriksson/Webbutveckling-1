@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+   
+    <button onclick="changeImage()">Evolve</button>
+    <img height="500px" src="charmander.jpg" id="pokemon">
+   
+  </body>
+
+   <script>
+    clicks = 0;
+     function changeImage() {
+      clicks += 1;
+      var imgelement = document.getElementById("pokemon");
+      if(clicks === 1){
+        imgelement.src = "charmeleon.jpg";
+      }
+      if(clicks === 2){
+          imgelement.src = "charizard.jpg";
+      }
+      if (clicks === 3){
+        clicks = 0;
+        imgelement.src = "charmander.jpg";
+
+      }
+     }
+
+    </script>
+</html>
