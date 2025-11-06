@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator Example</title>
+  </head>
+  <body>
+    <input type="text" id="num1" placeholder="Enter number 1" />
+    <button onclick="calculateSum()">+</button>
+    <input type="text" id="num2" placeholder="Enter number 2" />
+
+    <p id="result">Result:</p>
+  </body>
+  <script>
+    function calculateSum() {
+    // Läs in värdena från input-fälten och konvertera dem till nummer
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    // Beräkna summan
+    let sum = num1 + num2;
+    // Visa resultatet i paragrafen med id "result"
+    document.getElementById('result').innerHTML = 'Result: ' + sum;
+}
+  </script>
+</html>
