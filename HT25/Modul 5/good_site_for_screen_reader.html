@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title>Exempelsida – tillgänglig version</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      header, nav, main, footer {
+        padding: 1rem;
+      }
+
+      header {
+        background: #f5f5f5;
+      }
+
+      nav a {
+        margin-right: 1rem;
+      }
+
+      .button-look {
+        padding: 0.5rem 1rem;
+        background: #3498db;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .card {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      th, td {
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        text-align: left;
+      }
+
+      caption {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Om du vill ha något som är visuellt gömt men hörs av skärmläsare */
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Semantisk struktur + landmärkelement -->
+    <header>
+      <h1>Min exempelwebbplats</h1>
+      <nav aria-label="Huvudmeny">
+        <a href="#start">Hem</a>
+        <a href="#produkter">Produkter</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#prislista">Prislista</a>
+        <a href="#nyhetsbrev">Nyhetsbrev</a>
+      </nav>
+    </header>
+
+    <main id="start">
+      <section aria-labelledby="sektion-välkommen">
+        <h2 id="sektion-välkommen">Välkommen till min sida</h2>
+        <p>
+          Detta är en sida om olika tjänster och produkter. Här hittar du information,
+          kontaktformulär, prislista och möjlighet att prenumerera på nyhetsbrev.
+        </p>
+
+        <!-- Dekorativ bild: tom alt-attribute + aria-hidden -->
+        <figure aria-hidden="true">
+          <img src="https://via.placeholder.com/400x150"
+               width="400"
+               height="150"
+               alt="">
+        </figure>
+
+        <!-- Bild med meningsfull alt-text -->
+        <figure>
+          <img src="https://via.placeholder.com/100"
+               alt="Illustration av en produktikon">
+          <figcaption>En enkel ikon som representerar våra produkter.</figcaption>
+        </figure>
+
+        <!-- Riktig knapp med button-element -->
+        <p>
+          <button type="button"
+                  class="button-look"
+                  onclick="alert('Du klickade på knappen!')">
+            Klicka här
+          </button>
+        </p>
+
+        <!-- Länkar med tydligare länktext -->
+        <p>
+          För att läsa mer om vår verksamhet kan du besöka
+          <a href="https://example.com">vår huvudsida</a>
+          eller
+          <a href="https://example.com/mer">läsa mer om våra tjänster</a>.
+        </p>
+      </section>
+
+      <section id="produkter" aria-labelledby="sektion-produkter">
+        <h2 id="sektion-produkter">Våra produkter</h2>
+        <p>
+          Vi erbjuder flera olika abonnemangsnivåer för våra tjänster. Se prislistan nedan
+          för mer information.
+        </p>
+      </section>
+
+      <!-- Kontaktformulär med labels och semantisk struktur -->
+      <section id="kontakt" aria-labelledby="sektion-kontakt" class="card">
+        <h2 id="sektion-kontakt">Kontakta oss</h2>
+        <p>Fyll i formuläret nedan om du vill komma i kontakt med oss.</p>
+
+        <form onsubmit="alert('Formuläret är skickat (demo).'); return false;">
+          <div>
+            <label for="namn">Namn</label><br>
+            <input id="namn" name="namn" type="text" required>
+          </div>
+
+          <div>
+            <label for="epost">E-post</label><br>
+            <input id="epost" name="epost" type="email" required>
+          </div>
+
+          <div>
+            <label for="meddelande">Meddelande</label><br>
+            <textarea id="meddelande" name="meddelande" rows="4" cols="40" required></textarea>
+          </div>
+
+          <div style="margin-top: 0.5rem;">
+            <button type="submit" class="button-look">
+              Skicka
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Tabell med rubriker, caption och tydliga kolumner -->
+      <section id="prislista" aria-labelledby="sektion-prislista" class="card">
+        <h2 id="sektion-prislista">Prislista</h2>
+
+        <table>
+          <caption>Abonnemangsnivåer och priser per månad</caption>
+          <thead>
+            <tr>
+              <th scope="col">Paket</th>
+              <th scope="col">Pris (kr/mån)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bas</td>
+              <td>99</td>
+            </tr>
+            <tr>
+              <td>Plus</td>
+              <td>199</td>
+            </tr>
+            <tr>
+              <td>Pro</td>
+              <td>299</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Nyhetsbrev som korrekt formulär -->
+      <section id="nyhetsbrev" aria-labelledby="sektion-nyhetsbrev" class="card">
+        <h2 id="sektion-nyhetsbrev">Prenumerera på vårt nyhetsbrev</h2>
+        <p>
+          Få nyheter och uppdateringar direkt i din inkorg.
+        </p>
+
+        <form onsubmit="alert('Du är nu anmäld till nyhetsbrevet (demo).'); return false;">
+          <div>
+            <label for="nyhetsbrev-epost">E-postadress</label><br>
+            <input id="nyhetsbrev-epost" name="nyhetsbrev-epost" type="email" required>
+          </div>
+
+          <div style="margin-top: 0.5rem;">
+            <button type="submit" class="button-look">
+              Prenumerera
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Min exempelwebbplats</p>
+    </footer>
+  </body>
+</html>

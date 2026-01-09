@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap - Intro</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    
+  </head>
+
+  <body>
+
+    <!-- 
+  Varför blir containern 1140px bred?
+
+  Bootstrap har för varje breakpoint en maxbredd.
+  När skärmen är mellan 1200px (XL) och 1400px (XXL) används XL-maxbredden.
+
+  XL-maxbredden i Bootstrap 5 är: 1140px.
+
+  Det beror på att Bootstraps grid bygger på 12 kolumner, och 1140px är en bredd
+  som fungerar bra för att dela upp sidan i 12 lika stora kolumner med rätt
+  mellanrum (gutters). Det är också en lagom bredd för läsbarhet på vanliga
+  laptop-skärmar (t.ex. 1366px breda).
+
+  Därför: Vid t.ex. 1338px skärmbredd är alla containrar (container, sm, md, lg, xl)
+  lika stora, nämligen 1140px. Endast container-xxl och container-fluid fortsätter
+  vara 100% breda.
+-->
+    <div class="container border my-2">Regular container</div>
+    <div class="container-sm border my-2">100% wide until small breakpoint</div>
+    <div class="container-md border my-2">100% wide until medium breakpoint</div>
+    <div class="container-lg border my-2">100% wide until large breakpoint</div>
+    <div class="container-xl border my-2">100% wide until extra large breakpoint</div>
+    <div class="container-xxl border my-2">100% wide until extra extra large breakpoint</div>
+    <div class="container-fluid border border-5 my-2">Fluid container</div>
+
+    <h1 class="mt-4">Current Browser Size</h1>
+
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>Viewport Size</th>
+          <th>Bootstrap Breakpoint</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Extra small (&lt;576px)</td><td>xs</td></tr>
+        <tr><td>Small (&ge;576px)</td><td>sm</td></tr>
+        <tr><td>Medium (&ge;768px)</td><td>md</td></tr>
+        <tr><td>Large (&ge;992px)</td><td>lg</td></tr>
+        <tr><td>X-Large (&ge;1200px)</td><td>xl</td></tr>
+        <tr><td>XX-Large (&ge;1400px)</td><td>xxl</td></tr>
+      </tbody>
+    </table>
+  </body>
+</html>

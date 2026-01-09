@@ -1,12 +1,12 @@
 img:hover{
-    transform: scale(1.1);
+    transform: scale(1000);
     opacity: 1;
 }
 
 img{
     width: 800px;
-    transition: transform 1s, opacity 1s;
-    opacity: 0.00000001;
+    transition: transform 1000s, opacity 1s;
+    opacity: 0;
 }
 
 
@@ -18,4 +18,8 @@ a{
 a:hover{
     text-decoration: underline;
     text-shadow: 2px 2px 5px black;
+}
+
+h2{
+    font-size: 50px;
 }

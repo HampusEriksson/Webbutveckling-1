@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- Medvetet dålig sida för screen reader-test -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Min sida</title>
+    <style>
+      /* Allt layoutat med divar och span */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .menu-item {
+        display: inline-block;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+      .button-look {
+        padding: 10px 20px;
+        background: #3498db;
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .card {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+      .hidden-text {
+        font-size: 0; /* text som "försvinner" visuellt */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Ingen lang-attribut, ingen riktig header/nav/main/footer -->
+
+    <div id="top">
+      <div class="menu-item" onclick="alert('Går till startsida')">
+        Hem
+      </div>
+      <div class="menu-item" onclick="alert('Går till produkter')">
+        Produkter
+      </div>
+      <div class="menu-item" onclick="alert('Går till kontakt')">
+        Kontakt
+      </div>
+    </div>
+
+    <!-- Ologisk rubrikstruktur -->
+    <h3>Välkommen till min coola sida</h3>
+
+    <div>
+      <h1>Lite info</h1>
+      <p>
+        Detta är en sida om saker. Här finns massor av bra grejer.
+        Klicka runt lite så händer det kanske något.
+      </p>
+    </div>
+
+    <!-- Bild utan alt-text -->
+    <div>
+      <img src="https://via.placeholder.com/400x150" width="400" height="150">
+    </div>
+
+    <!-- Bild med dålig alt-text -->
+    <div>
+      <img src="https://via.placeholder.com/100" alt="Bild" />
+    </div>
+
+    <!-- Klickbar span istället för knapp/länk -->
+    <p>
+      <span class="button-look" onclick="alert('Du klickade!')">
+        Klicka här
+      </span>
+    </p>
+
+    <!-- Länkar utan sammanhang -->
+    <p>
+      För att läsa mer, klicka
+      <a href="https://example.com">här</a>
+      eller
+      <a href="https://example.com/mer">läs mer</a>.
+    </p>
+
+    <!-- Formulär utan labels -->
+    <div class="card" id="kontakt">
+      <h2>Kontakta oss</h2>
+
+      <p>
+        <input type="text" placeholder="Namn">
+      </p>
+      <p>
+        <input type="email" placeholder="E-post">
+      </p>
+      <p>
+        <input type="text" placeholder="Skriv ditt meddelande här">
+      </p>
+      <p class="button-look" onclick="alert('Skickat!')">
+        Skicka
+      </p>
+    </div>
+
+    <!-- Tabell utan rubriker -->
+    <div class="card">
+      <h2>Prislista</h2>
+      <table border="1">
+        <tr>
+          <td>Bas</td>
+          <td>99</td>
+          <td>kr</td>
+        </tr>
+        <tr>
+          <td>Plus</td>
+          <td>199</td>
+          <td>kr</td>
+        </tr>
+        <tr>
+          <td>Pro</td>
+          <td>299</td>
+          <td>kr</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- “Knapp” som egentligen är en div -->
+    <div class="card" id="nyhetsbrev">
+      <h4>Prenumerera på vårt nyhetsbrev</h4>
+      <div id="nyhetsbrev" class="button-look" onclick="alert('Inte på riktigt')">
+        Prenumerera
+      </div>
+    </div>
+
+    <!-- Text som bara är visuell, men irrelevant ljudmässigt -->
+    <div class="hidden-text">
+      Här står massa text som egentligen inte behöver läsas upp, men nu är den osynlig för seende istället.
+    </div>
+
+    <!-- Onödig text som inte förklarar något -->
+    <div>
+      <p>Klicka bara på saker så händer grejer.</p>
+      <p>Allt är nice och bra här.</p>
+    </div>
+
+    <script>
+      // Ingen tangentbordsnavigering hanteras för "knapparna"
+    </script>
+  </body>
+</html>
