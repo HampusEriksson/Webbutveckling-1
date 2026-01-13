@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+   
+    <input type="number" id="nr1">
+    <p>+</p>
+    <input type="number" id="nr2">
+    <button onclick="Sum()">=</button>
+
+    <p id="result"></p>
+  </body>
+
+  <script>
+
+    function Sum(){
+        let nr1 = parseFloat(document.getElementById("nr1").value);
+        let nr2 = parseFloat(document.getElementById("nr2").value);
+
+        document.getElementById("result").innerHTML = nr1 + nr2;
+    }
+
+    </script>
+</html>

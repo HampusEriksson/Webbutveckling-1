@@ -41,24 +41,55 @@
     50% { transform: translate(-5px, -5px); }
     75% { transform: translate(5px, -5px); }
   }
+
+  #bouncingImage {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    display: none;
+    z-index: 1000;
+  }
+
+  .bouncing-img {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+  }
 </style>
 </head>
 <body>
-  <button id="theButton">Don't click</button>
+  <button id="theButton">Plz don't click</button>
+  <div id="imageContainer"></div>
+  <img id="bouncingImage" src="olle.jfif" alt="olle">
+  <audio id="crazySound" loop>
+    <source src="sound.mp3" type="audio/mpeg">
+  </audio>
 
   <script>
     let clicks = 0;
     const btn = document.getElementById("theButton");
 
+    function randomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
     btn.addEventListener("click", () => {
       clicks++;
 
-      if (clicks === 10) {
+      if (clicks === 1) {
         btn.textContent = "Stop it. I mean it!";
         btn.style.background = "darkorange";
       }
-
-      if (clicks === 20) {
+      else if (clicks === 2) {
+        btn.textContent = "Seriously, don't click!";
+        btn.style.background = "gold";
+      }
+      else if (clicks === 3) {
+        btn.textContent = "Why are you still clicking?";
+        btn.style.background = "yellowgreen";
+      }
+      else if (clicks === 4) {
         btn.textContent = "You asked for it...";
         goCrazy();
       }
@@ -66,7 +97,13 @@
 
     function goCrazy() {
       let colors = ["red", "green", "blue", "yellow", "magenta", "cyan", "lime", "orange"];
-      btn.classList.add("shake");
+      const container = document.getElementById("imageContainer");
+      const sound = document.getElementById("crazySound");
+      const btnRect = btn.getBoundingClientRect();
+      const centerX = btnRect.left + btnRect.width / 2 - 50;
+      const centerY = btnRect.top + btnRect.height / 2 - 50;
+
+      sound.play();
 
       setInterval(() => {
         document.body.style.background = colors[Math.floor(Math.random() * colors.length)];
@@ -74,15 +111,45 @@
         document.body.style.color = colors[Math.floor(Math.random() * colors.length)];
       }, 100);
 
-      setInterval(() => {
+      /*setInterval(() => {
         alert("WHY DID YOU CLICK IT?!");
       }, 3000);
-
+*/
       let rotate = 0;
       setInterval(() => {
-        rotate += 10;
+        rotate += randomInt(5, 20);
         btn.style.transform = `rotate(${rotate}deg) scale(1.2)`;
-      }, 200);
+      }, 20);
+
+      // Spawn 10 images from button center
+      const images = [];
+      for (let i = 0; i < 10; i++) {
+        const img = document.createElement("img");
+        img.src = "olle.jfif";
+        img.alt = "olle";
+        img.className = "bouncing-img";
+        img.style.left = centerX + "px";
+        img.style.top = centerY + "px";
+        container.appendChild(img);
+
+        const speed = randomInt(3, 8);
+        const angle = (Math.PI * 2 * i) / 10; // Spread images evenly
+        let vx = Math.cos(angle) * speed;
+        let vy = Math.sin(angle) * speed;
+        let x = centerX;
+        let y = centerY;
+
+        setInterval(() => {
+          x += vx;
+          y += vy;
+
+          if (x <= 0 || x >= window.innerWidth - 100) vx *= -1;
+          if (y <= 0 || y >= window.innerHeight - 100) vy *= -1;
+
+          img.style.left = x + "px";
+          img.style.top = y + "px";
+        }, 30);
+      }
     }
   </script>
 </body>
