@@ -9,46 +9,52 @@
 
 <body>
   <label for="temperatureSlider">Select Temperature:</label>
-  <input type="range" id="temperatureSlider" min="-10" max="40" value="15" />
+  <input type="range" id="temperatureSlider" min="-20" max="40" value="30" />
   <p id="selectedTemperature">15°C</p>
 
   <h1 id="weatherMessage">Weather Message</h1>
 
   <script>
-    // Get references to DOM elements
-    let temperatureSlider = document.getElementById("temperatureSlider");
-    let selectedTemperatureElement = document.getElementById("selectedTemperature");
-    let weatherMessageElement = document.getElementById("weatherMessage");
+  
+  let temperatureSlider = document.getElementById("temperatureSlider");
+  let selectedTemperature = document.getElementById("selectedTemperature");
+  let weatherMessage = document.getElementById("weatherMessage");
+  
+  updateWeatherMessage(temperatureSlider.value);
+
+  temperatureSlider.addEventListener("input", function(){
+    let currentTemp = temperatureSlider.value;
+    selectedTemperature.innerHTML = currentTemp + "°C";
+      updateWeatherMessage(currentTemp);
 
 
-    // Initial update of weather message based on the default temperature
-    updateWeatherMessage(temperatureSlider.value);
+  })
 
-    // Event listener for slider change
-    temperatureSlider.addEventListener("input", function () {
-      // Update the displayed temperature
-      selectedTemperatureElement.innerText = temperatureSlider.value + "°C";
+  function updateWeatherMessage(temp){
+    console.log(temp);
+    weatherMessage.style.fontSize = Math.abs(temp) + 20;
 
-      // Update the weather message based on the selected temperature
-      updateWeatherMessage(temperatureSlider.value);
-    });
+    if(temp > 25){
+      weatherMessage.innerHTML = "It's hot outside"
+      //weatherMessage.style.fontSize = 28;
+      weatherMessage.style.color = "Red";
 
-    // Function to update the weather message
-    function updateWeatherMessage(temperature) {
-      if (temperature > 30) {
-        weatherMessageElement.innerText = "It's a hot day!";
-        weatherMessageElement.style.color = "red";
-        weatherMessageElement.style.fontSize = "64px";
-      } else if (temperature <= 30 && temperature >= 20) {
-        weatherMessageElement.innerText = "The weather is pleasant.";
-        weatherMessageElement.style.color = "green";
-        weatherMessageElement.style.fontSize = "32px";
-      } else {
-        weatherMessageElement.innerText = "It's a bit chilly.";
-        weatherMessageElement.style.color = "blue";
-        weatherMessageElement.style.fontSize = "16px";
-      }
+
+    }else if(temp < -10){
+      weatherMessage.innerHTML = "It's cold outside"
+           // weatherMessage.style.fontSize = 20;
+      weatherMessage.style.color = "Blue";
+    }else{
+      weatherMessage.innerHTML = "It's a normal day"
+            //weatherMessage.style.fontSize = 16;
+      weatherMessage.style.color = "Yellow";
     }
+
+
+
+
+  }
+
 
 
   </script>
