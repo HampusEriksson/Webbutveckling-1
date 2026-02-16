@@ -32,21 +32,21 @@
 
   function updateWeatherMessage(temp){
     console.log(temp);
-    weatherMessage.style.fontSize = Math.abs(temp) + 20;
+    weatherMessage.style.fontSize = temp/3 + 20 + "px";
 
     if(temp > 25){
       weatherMessage.innerHTML = "It's hot outside"
-      //weatherMessage.style.fontSize = 28;
+      weatherMessage.style.fontSize = 28;
       weatherMessage.style.color = "Red";
 
 
     }else if(temp < -10){
       weatherMessage.innerHTML = "It's cold outside"
-           // weatherMessage.style.fontSize = 20;
+      weatherMessage.style.fontSize = 20;
       weatherMessage.style.color = "Blue";
     }else{
       weatherMessage.innerHTML = "It's a normal day"
-            //weatherMessage.style.fontSize = 16;
+      weatherMessage.style.fontSize = 16;
       weatherMessage.style.color = "Yellow";
     }
 
