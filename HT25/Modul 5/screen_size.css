@@ -1,0 +1,66 @@
+
+/* Desktopstandard */
+body {
+	background: #eaf2ff;
+}
+
+.status {
+	background: #bfdbfe;
+}
+
+.status::after {
+	content: " - Desktop (>=900px)";
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card{
+	background-color: antiquewhite;
+	margin: 10px;
+	max-width: 300px;
+}
+
+
+/* Surfplatta: 600px till 900px */
+@media (max-width: 900px) {
+	body {
+		background: #e8f7ef;
+
+	}
+
+	.status {
+		background: #bbf7d0;
+		font-size: 48px;
+	}
+
+	.status::after {
+		content: " - Surfplatta (600-900px)";
+	}
+
+	.cards {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Mobil:  <= 600px */
+@media (max-width: 600px) {
+	body {
+		background: #f2f4f8;
+	}
+
+	.status {
+		background: #e5e7eb;
+	}
+
+	.status::after {
+		content: " - Mobil (<=600px)";
+	}
+
+	.cards {
+		grid-template-columns: 1fr;
+	}
+}
+
