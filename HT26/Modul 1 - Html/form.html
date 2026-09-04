@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Mitt formulär</title>
+</head>
+<body>
+    <h1>Mitt formulär</h1>
+
+    <form action="tack.html" method="get">
+        <fieldset>
+            <legend>Dina uppgifter</legend>
+
+            <label for="namn">Namn:</label>
+            <input type="text" id="namn" name="namn" required>
+
+            <label for="epost">E-post:</label>
+            <input type="email" id="epost" name="epost" required>
+
+            <label for="alder">Ålder:</label>
+            <input type="number" id="alder" name="alder" min="0" max="120">
+
+            <p>Vilket ämne gillar du mest?</p>
+            <input type="radio" id="html" name="favorit" value="html" checked>
+            <label for="html">HTML</label>
+            <input type="radio" id="css" name="favorit" value="css">
+            <label for="css">CSS</label>
+
+            <label for="meddelande">Meddelande:</label>
+            <textarea id="meddelande" name="meddelande" rows="4" cols="50"></textarea>
+        </fieldset>
+
+        <button type="submit">Skicka formulär</button>
+    </form>
+</body>
+</html>
