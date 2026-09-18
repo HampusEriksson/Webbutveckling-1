@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<!-- Details och summary: Fällbar text utan JS -->
+<details>
+    <summary>Vilka tider har matsalen öppet?</summary>
+    <p>Matsalen är öppen mellan 11:00 och 13:00 varje vardag.</p>
+</details>
+
+<br><br><br><br><br><br>
+
+<!-- Sökruta med autoförslag -->
+<label for="kurs-sok">Sök kurs:</label>
+<input type="text" id="kurs-sok" list="suggestions" placeholder="Skriv t.ex. Fysik...">
+
+<datalist id="suggestions">
+    <option value="Matematik"></option>
+    <option value="Fysik"></option>
+    <option value="Kemi"></option>
+    <option value="Teknik"></option>
+</datalist>
+
+<br><br><br><br><br><br>
+
+<!-- Progress: Framsteg i en process (något som rör sig mot 100%) -->
+<label for="kurs-progress">Inlämnade uppgifter (70%):</label>
+<progress id="kurs-progress" value="70" max="100">70%</progress>
+
+<br><br><br><br><br><br>
+
+<!-- Meter: Ett mätvärde på en fast skala (t.ex. betyg, batteri, diskutrymme) -->
+<label for="disk-meter">Batteri:</label>
+<meter id="disk-meter" value="0.2" min="0" max="1" optimum="1" high="0.8" low="0.3">20%</meter>
+
+</body>
+
+</html>
