@@ -1,0 +1,51 @@
+	:root {
+		--primary-color: #2563eb;
+		--secondary-color: rgb(16 185 129);
+		--accent-color: #f59e0b;
+		--text-color: #1f2937;
+		--page-background: white;
+		--size: 24px;
+	}
+
+	body {
+		color: var(--text-color);
+		background-color: var(--page-background);
+	}
+
+	p {
+		color: rgb(16 185 129);
+	}
+
+	.rgba {
+		color: black;
+		font-size: var(--size);
+		background-color: rgba(49, 205, 18, 0.11);
+	}
+
+	.hex {
+		background-color: #52329d;
+	}
+
+	.named {
+		background-color: rgb(158, 41, 41);
+	}
+
+	.primary {
+		background-color: var(--primary-color);
+	}
+
+	.secondary {
+		background-color: var(--secondary-color);
+	}
+
+	.accent {
+		background-color: var(--accent-color);
+	}
+
+
+	.examples div {
+		min-width: 10rem;
+		padding: 1rem;
+		border-radius: 0.25rem;
+		color: white;
+	}

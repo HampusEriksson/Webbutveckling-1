@@ -1,0 +1,46 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+.box {
+	width: 120px;
+	height: 50px;
+	padding: 10px;
+	background-color: lightblue;
+}
+
+.relative {
+	position: relative;
+	left: 30px;
+}
+
+.parent {
+	position: relative;
+	height: 80px;
+	border: 1px solid black;
+}
+
+.absolute {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.scroll-box {
+	height: 120px;
+	overflow: auto;
+	border: 1px solid black;
+}
+
+.sticky {
+	position: sticky;
+	top: 0;
+	background-color: lightgreen;
+}
+
+.fixed {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	background-color: lightcoral;
+}

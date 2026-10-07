@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS position</title>
+	<link rel="stylesheet" href="position.css">
+</head>
+<body>
+	<h1>CSS position</h1>
+	<p>Position bestämmer var ett element visas på sidan.</p>
+
+	<h2>static</h2>
+	<p>Standardläget. Elementet visas på sin vanliga plats.</p>
+	<div class="box">static</div>
+
+	<h2>relative</h2>
+	<p>Elementet flyttas från sin vanliga plats.</p>
+	<div class="box relative">relative</div>
+
+	<h2>absolute</h2>
+	<p>Elementet placeras i förhållande till sin närmaste positionerade förälder.</p>
+	<div class="parent">
+		<div class="box absolute">absolute</div>
+	</div>
+
+	<h2>sticky</h2>
+	<p>Rulla i rutan för att se hur elementet fastnar högst upp.</p>
+	<div class="scroll-box">
+		<div class="box sticky">sticky</div>
+		<p>Rulla vidare...</p>
+		<p>Rulla vidare...</p>
+		<p>Rulla vidare...</p>
+	</div>
+
+	<div class="box fixed">fixed</div>
+</body>
+</html>
