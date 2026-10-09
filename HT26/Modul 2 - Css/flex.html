@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="flex.css">
-</head>
-<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        main div {
+            margin: 10px;
+            background-color: yellow;
+        }
+
+        main {
+            display: flex;
+            background-color: lightblue;
+            justify-content: space-between;
+
+        }
+
+        .redboxes {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
     
+
+        .redboxes div {
+            background-color: red;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="imgdiv">
+            <img src="charizard.jpg" alt="" style="width: 200px;">
+        </div>
+        <div class="redboxes">
+            <div style="height: 100px;">
+                <p style="margin: 50% 0 50% 0;">Box 1</p>
+            </div>
+            <div style="height: 200px;">
+                <p>Box 2</p>
+            </div>
+            <div style="height: 300px;">
+                <p>Box 3</p>
+            </div>
+            <div style="height: 400px;">
+                <p ">Box 4</p>
+            </div>
+            <div style="height: 400px;">
+                <p>Box 4</p>
+            </div>
+            <div style="height: 400px;">
+                <p>Box 4</p>
+            </div>
+            <div style="height: 400px;">
+                <p>Box 4</p>
+            </div>
+            <div style="height: 400px;">
+                <p>Box 4</p>
+            </div>
+            <div style="height: 400px;">
+                <p>Box 4</p>
+            </div>
+            <div style="height: 400px;">
+                <p>Box 4</p>
+            </div>
+            <div style="height: 400px;">
+                <p>Box 4</p>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
