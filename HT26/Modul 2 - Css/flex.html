@@ -5,82 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="flex.css">
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        main div {
-            margin: 10px;
+
+        .flexbox div {
+            background-color: aqua;
+            border: 2px solid black;
+            width: 150px;
+            height: 50px;
+        }
+
+        .flexbox {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+            align-items:center;
+        }
+
+        header {
             background-color: yellow;
         }
 
+        footer {
+            background-color: blueviolet;
+        }
+
         main {
-            display: flex;
-            background-color: lightblue;
-            justify-content: space-between;
+            flex-grow: 1;
 
         }
 
-        .redboxes {
+        body {
             display: flex;
-            gap: 30px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-    
-
-        .redboxes div {
-            background-color: red;
-            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: burlywood;
         }
     </style>
 </head>
 
 <body>
 
-    <main>
-        <div class="imgdiv">
-            <img src="charizard.jpg" alt="" style="width: 200px;">
+    <header>
+        <h1>Välkommen</h1>
+    </header>
+    <main class="flexbox">
+
+        <div>
+            <p>Box 1</p>
         </div>
-        <div class="redboxes">
-            <div style="height: 100px;">
-                <p style="margin: 50% 0 50% 0;">Box 1</p>
-            </div>
-            <div style="height: 200px;">
-                <p>Box 2</p>
-            </div>
-            <div style="height: 300px;">
-                <p>Box 3</p>
-            </div>
-            <div style="height: 400px;">
-                <p ">Box 4</p>
-            </div>
-            <div style="height: 400px;">
-                <p>Box 4</p>
-            </div>
-            <div style="height: 400px;">
-                <p>Box 4</p>
-            </div>
-            <div style="height: 400px;">
-                <p>Box 4</p>
-            </div>
-            <div style="height: 400px;">
-                <p>Box 4</p>
-            </div>
-            <div style="height: 400px;">
-                <p>Box 4</p>
-            </div>
-            <div style="height: 400px;">
-                <p>Box 4</p>
-            </div>
-            <div style="height: 400px;">
-                <p>Box 4</p>
-            </div>
+        <div>
+            <p>Box 2</p>
+        </div>
+        <div>
+            <p>Box 3</p>
+        </div>
+        <div>
+            <p>Box 3</p>
+        </div>
+        <div>
+            <p>Box 3</p>
         </div>
     </main>
+
+    <footer>
+        <h2>Kontaktuppgifter</h2>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flexbox div {
+            background-color: aqua;
+            border: 2px solid black;
+            width: 150px;
+            height: 50px;
+        }
+
+        .flexbox {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header {
+            background-color: yellow;
+        }
+
+        footer {
+            background-color: blueviolet;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: burlywood;
+        }
+
+        section {
+            background-color: deeppink;
+            width: 50%;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+
+
+        .rightsection div {
+            width: 100%;
+            height: 25%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Välkommen</h1>
+    </header>
+    <main class="flexbox">
+        <section>
+            <h2>Section 1</h2>
+        </section>
+        <section class="rightsection">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>Kontaktuppgifter</h2>
+    </footer>
+</body>
+
+</html>
