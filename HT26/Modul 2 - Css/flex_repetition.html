@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            margin: 20px;
+            background-color: aquamarine;
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        header{
+            background-color: yellow;
+            flex-grow: 1;
+        }
+        main{
+            background-color: red;
+            flex-grow: 8;
+            display: flex;
+            justify-content: space-around;
+        }
+        footer{
+            background-color: blue;
+            flex-grow: 1;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: antiquewhite;
+        }
+
+        .big{
+            font-size: 24px;
+        }
+
+        .cool{
+            grad;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+    <header class="big">
+        <h1>Hampus pizzeria</h1>
+        <nav>
+            <a href="">Hem</a>
+            <a href="">Om oss</a>
+            <a href="">Meny</a>
+        </nav>
+    </header>
+    <main>
+        <section >
+            <h2>Våra pizzor</h2>
+            <ul>
+                <li>Caprissosa</li>
+                <li>Vesuvio</li>
+                <li>Margarita</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Vår filosofi</h2>
+            <p>Vi gillar pizzor</p>
+        </section>
+    </main>
+    <footer>Telefon: +46123456</footer>
+</body>
+</html>
