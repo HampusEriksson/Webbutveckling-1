@@ -11,12 +11,11 @@
             padding: 0;
         }
         nav{
-            margin: 20px;
             background-color: aquamarine;
-            height: 100px;
             display: flex;
             justify-content: space-evenly;
-            align-items: center;
+            font-size: 32px;
+            min-height: 100px;
         }
 
         header{
@@ -25,35 +24,42 @@
         }
         main{
             background-color: red;
+            padding: 10px;
             flex-grow: 8;
             display: flex;
             justify-content: space-around;
+        }
+
+        section{
+            background-color: darkturquoise;
+            border: 5px solid black;
+            width: 30vw;
+            padding: 20px;
+           
+
+        }
+
+        section ul{
+            list-style: none;
         }
         footer{
             background-color: blue;
             flex-grow: 1;
         }
         body{
+         
+            background-color: antiquewhite;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: antiquewhite;
-        }
 
-        .big{
-            font-size: 24px;
         }
-
-        .cool{
-            grad;
-        }
-        
     </style>
 </head>
 <body>
     
 
-    <header class="big">
+    <header>
         <h1>Hampus pizzeria</h1>
         <nav>
             <a href="">Hem</a>
@@ -75,6 +81,8 @@
             <p>Vi gillar pizzor</p>
         </section>
     </main>
-    <footer>Telefon: +46123456</footer>
+    <footer>
+        <p>Telefon: +46123456</p>
+        </footer>
 </body>
 </html>
