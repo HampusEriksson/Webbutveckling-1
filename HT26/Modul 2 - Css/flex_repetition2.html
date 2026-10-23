@@ -8,38 +8,50 @@
     <style>
         p {
             background-color: bisque;
-            border: dashed;
+            border: dotted 5px green;
             padding: 20px;
+        }
+
+        div{
+            background-color: red;
+            padding: 20px;
+        }
+
+        .p1, .p2{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+        }
+        .p2{
+            font-weight: bold;
         }
 
         .flex{
             display: flex;
         }
 
-        .big{
-            font-size: 36px;
-        }
-        .bluecolor{
-            color: blue;
+        .justifycenter{
+            justify-content: center;
         }
 
-        .redcolor{
-            color: red;
+        .bgcolorblue{
+            background-color: blue;
         }
 
-        
+        .bgcoloryellow{
+            background-color: yellow;
+        }
     </style>
 </head>
 
 <body>
-    <div class="flex big bluecolor">
-        <p>Lorem, ipsum.</p>
-        <p>Lorem, ipsum.</p>
+    <div class="flex justifycenter bgcolorblue bgcoloryellow">
+        <p class="p1">Lorem, ipsum.</p>
+        <p class="p2">Lorem, ipsum.</p>
         <p>Lorem, ipsum.</p>
     </div>
-    <div class="bluecolor redcolor">
+    <div>
         <p>Lorem, ipsum.</p>
-        <p>Lorem, ipsum.</p>
+        <p class="bgcolorblue">Lorem, ipsum.</p>
         <p>Lorem, ipsum.</p>
     </div>
     <div class="flex">
