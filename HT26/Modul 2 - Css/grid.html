@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    
-    body{
-        display: grid;
-        grid-template-rows: 1fr 6fr 1fr;
-        height: 100vh;
-    }
+    <style>
 
-    main{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 10fr 1fr 3fr;
-    }
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: 1fr 5fr 1fr 3fr 100px;
+}
 
-    header, main, footer, section{
-        border: 2px solid black;
-    }
+header, section{
+    border: 3px solid;
+    background-color: lightblue;
+}
 
-    main{
-        padding: 20px;
-        background-color: aqua;
-    }
+.col2{
+    grid-column: span 2;
+}
 
-    section{
-        background-color: bisque;
-    }
-
-    .col2{
-        grid-column: span 2;
-    }
-
-    .row2{
-        grid-row: span 2;
-    }
-
-</style>
+.row2{
+    grid-row: span 2;
+}
+div{
+    border: 2px solid red;
+}
+    </style>
 </head>
+
 <body>
 
-<header>Header</header>
-<main>
-    <section class="row2" >s1</section>
-    <section >s2</section>
-    <section class="row2">s3</section>
-    <section >s4</section>
-</main>
-<footer>Footer</footer>
-    
+    <header class="col2">Header</header>
+    <section class="row2">Section 1</section>
+    <section>Section 2</section>
+    <section>
+        <div>div 1</div>
+        <div>div 2</div>
+    </section>
+    <section class="col2">Section 3</section>
+    <section>Section 4</section>
+    <section>Section 5</section>
+
 </body>
+
 </html>
