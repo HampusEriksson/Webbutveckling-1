@@ -11,44 +11,58 @@
             padding: 0;
         }
 
-
-
         .div1 {
-/*Linear gradient*/
-height: 50vh;
-border: 3px solid;
+            /*Linear gradient*/
+            height: 50vh;
+            border: 3px solid;
+            background: linear-gradient(to bottom,yellow, yellow, red, blue);
         }
 
         .div2 {
             /*Radial gradient*/
             height: 50vh;
-border: 3px solid;
-
-
+            border: 3px solid;
+            background: radial-gradient(circle, yellow, red, blue);
+            display: flex;
+            justify-content: center;
         }
 
+        p{
+            font-size: 24px;
+            color: brown;
+            font-weight: bold;
+        }
 
+        p:hover{
+            font-size: 36px;
+            color: aqua;
+            font-weight: normal;
+            text-decoration: underline;
+        }
+
+        h2:hover{
+            transform: scale(2);
+        }
+
+        h2{
+            transition: all 2s;
+            font-size: 48px;
+            color: aliceblue;
+            width: 20vw;
+            text-align: center;
+        }
         
-        p {
-            /*transition: all 2s;*/
-        }
-
-
-        p:hover {
-            /*transform: scale(2);*/
-            
-        }
     </style>
 </head>
 
 <body>
 
     <div class="div1">
+        <p>HOVER HERE</p>
 
     </div>
     <div class="div2">
-        <p>HOVER HERE</p>
-
+<h2>Hej</h2>
     </div>
 </body>
 
