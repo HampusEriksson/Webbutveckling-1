@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Det element du vill mäta mot */
+.target-element {
+    height: 40vh;
+    width: 20vw;
+  anchor-name: --my-anchor;
+}
+
+/* Elementet som ska anta samma bredd eller höjd */
+.follower-element {
+  position: absolute;
+  position-anchor: --my-anchor;
+  width: anchor(width)/2;   /* Tar samma bredd som target-element */
+  height: anchor(height)/2; /* Tar samma höjd som target-element */
+}
+
+div{
+    background-color: aqua;
+}
+    </style>
+</head>
+<body>
+    
+<div class="target-element"></div>
+<div class="follower-element"></div>
+
+</body>
+</html>

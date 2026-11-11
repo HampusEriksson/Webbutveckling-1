@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillnad mellan font-size och scale</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .demo {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .label {
+            width: 220px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: #3b82f6;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .font-button:hover {
+            font-size: 2rem;
+            background: #2563eb;
+        }
+
+        .scale-button:hover {
+            transform: scale(1.2);
+            background: #1d4ed8;
+        }
+
+        .side-text {
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <div class="row">
+            <div class="label">font-size påverkar layouten</div>
+            <button class="button font-button">Knapp</button>
+            <span class="side-text">Text efter knappen</span>
+        </div>
+
+        <div class="row">
+            <div class="label">scale påverkar bara visningen</div>
+            <button class="button scale-button">Knapp</button>
+            <span class="side-text">Text efter knappen</span>
+        </div>
+    </div>
+</body>
+</html>
