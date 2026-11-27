@@ -1,89 +1,104 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
-  <meta charset="UTF-8">
-  <style>
-    /* 1. TRANSITION */
-    .button {
-      background: blue;
-      color: white;
-      padding: 10px 20px;
-      transition: background 0.3s, transform 0.3s;
-    }
+    <meta charset="UTF-8">
+    <style>
+        body {
+            text-align: center;
+        }
 
-    .button:hover {
-      background: darkblue;
-      transform: scale(1.1);
-    }
+        /* 1. TRANSITION */
+        .button {
+            background: blue;
+            color: white;
+            transition: background 0.3s, transform 0.3s;
+        }
 
-    /* 2. @KEYFRAMES & ANIMATION (Flera steg / loop) */
-    @keyframes hoppa {
-      0%, 100%   { transform: translateY(0); }
-      50%  { transform: translateY(-15px); }
-    }
+        .button:hover {
+            background: darkblue;
+            transform: scale(1.2);
+        }
 
-    .box {
-      width: 80px;
-      height: 80px;
-      background: green;
-      margin-top: 30px;
-      animation: hoppa 1.5s infinite;
-    }
-@keyframes dyk-upp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+        /* 2. @KEYFRAMES & ANIMATION*/
+        @keyframes jump {
 
-.rubrik1 {
-  animation: dyk-upp 0.8s ;
-}
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .box {
+            width: 80px;
+            height: 80px;
+            background: green;
+            margin-top: 30px;
+            animation: jump 1.5s infinite;
+        }
+
+        @keyframes reveal {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .rubrik1 {
+            animation: reveal 0.8s;
+        }
 
 
-    /* 3. PSEUDO-ELEMENT (::before & ::after) */
-    .rubrik::before {
-      content: "★ ";
-      color: orange;
-    }
+        /* 3. PSEUDO-ELEMENT (::before & ::after) */
+        .rubrik::before {
+            content: "★ ";
+            color: orange;
+        }
 
-    .lank {
-      position: relative;
-      text-decoration: none;
-      color: black;
-    }
+        .lank {
+            position: relative;
+            text-decoration: none;
+            color: black;
+        }
 
-    .lank::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 0%;
-      height: 2px;
-      background: red;
-      transition: width 0.3s;
-    }
+        .lank::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0%;
+            height: 2px;
+            background: red;
+            transition: width 0.3s;
+        }
 
-    .lank:hover::after {
-      width: 100%;
-    }
-  </style>
+        .lank:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
 
-  <button class="button">Hovra mig</button>
+    <button class="button">Hovra mig</button>
 
-  <div class="box"></div>
+    <div class="box"></div>
 
-  <h1 class="rubrik1">Rubrik 1</h1>
+    <h1 class="rubrik1">Rubrik 1</h1>
 
-  <h2 class="rubrik">Rubrik med pseudo-element</h2>
+    <h2 class="rubrik">Rubrik med pseudo-element</h2>
 
-  <a href="#" class="lank">Länk med linje</a>
+    <a href="#" class="lank">Länk med linje</a>
 
 </body>
+
 </html>
